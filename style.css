@@ -91,9 +91,38 @@ h1 {
   to { border-color: orange; }
 }
 
-@media screen and (max-width: 431px) {
+@media screen and (max-width: 775px) {
+  .name-title, h1 
+  {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .name-title, h1 
+  {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .name-title, h1 
+  {
+    font-size: 2.5rem;
+  }
+}
+
+
+@media screen and (max-width: 475px) {
   .name-title, h1 
   {
     font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .name-title, h1 
+  {
+    font-size: 1.5rem;
   }
 }

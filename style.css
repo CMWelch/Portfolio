@@ -33,18 +33,20 @@ h1 {
     font-size: 4rem;
 }
 
-.name-title {
-  display: inline-block;
-  font-family: Inter Tight;
-  font-weight: 300;
-  font-size: 4rem;
-
+.center {
   /* Center in the middle of the screen*/
   position: absolute;
   inset: 0;   /* inset is the more modern shorthand of top, right bottom left */
   margin: auto;
   height: max-content; /* Max height and width set to content keeps the div from expanding too far */
   width: max-content;
+}
+
+.name-title {
+  display: inline-block;
+  font-family: Inter Tight;
+  font-weight: 300;
+  font-size: 4rem;
 }
   
 .typewriter {
@@ -79,6 +81,9 @@ h1 {
 @keyframes hiding {
   from {visibility: hidden;}
   to {visibility: hidden;}
+
+  /* from {display: none;}
+  to {display: none;} */
 }
   
 @keyframes typing {
@@ -89,6 +94,18 @@ h1 {
 @keyframes blinking {
   from { border-color: transparent; }
   to { border-color: orange; }
+}
+
+@media screen and (max-width: 1500px) {
+  .name-title
+  {
+    display: inline;
+  }
+
+  @keyframes hiding {
+    from {display: none;}
+    to {display: none;}
+  }
 }
 
 @media screen and (max-width: 775px) {
@@ -112,7 +129,6 @@ h1 {
   }
 }
 
-
 @media screen and (max-width: 475px) {
   .name-title, h1 
   {
@@ -124,5 +140,26 @@ h1 {
   .name-title, h1 
   {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 275px) {
+  .name-title, h1 
+  {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 175px) {
+  .name-title, h1 
+  {
+    font-size: .5rem;
+  }
+}
+
+@media screen and (max-width: 75px) {
+  .name-title, h1 
+  {
+    font-size: .25rem;
   }
 }

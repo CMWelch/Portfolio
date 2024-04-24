@@ -1,3 +1,8 @@
+:root {
+ --accent-color: orange;
+ --header-font-size: 4rem;
+}
+
 html {
     width: 100%;
     height: 100%;
@@ -30,7 +35,7 @@ Section.landing {
 
 h1 {
     font-weight: 300;
-    font-size: 4rem;
+    font-size: var(--header-font-size);
 }
 
 .center {
@@ -46,7 +51,7 @@ h1 {
   display: inline-block;
   font-family: Inter Tight;
   font-weight: 300;
-  font-size: 4rem;
+  font-size: var(--header-font-size);
 }
   
 .typewriter {
@@ -65,7 +70,7 @@ h1 {
 
 .typewriter-second {
   overflow: hidden;
-  border-right: .05em solid orange;
+  border-right: .05em solid rgb(168, 167, 164);
   white-space: nowrap;
   animation:
     typing 1s steps(20, end) 3s,
@@ -81,9 +86,6 @@ h1 {
 @keyframes hiding {
   from {visibility: hidden;}
   to {visibility: hidden;}
-
-  /* from {display: none;}
-  to {display: none;} */
 }
   
 @keyframes typing {
@@ -93,7 +95,58 @@ h1 {
 
 @keyframes blinking {
   from { border-color: transparent; }
-  to { border-color: orange; }
+  to { border-color: var(--accent-color); }
+}
+
+.about {
+  background-color: rgb(221, 216, 210);
+}
+
+.about-title {
+  border-bottom: 2px solid;
+  border-color: var(--accent-color);
+  width: 85%;
+  margin: 0;
+  margin-left: 7.5%;
+  padding-top: 5%;
+}
+
+.card {
+  --card-side-margin: 5%;
+  --card-inside-margin: 0;
+  display: block;
+  text-align: center;
+  margin-top: 5%;
+  font-size: 1.5rem;
+}
+
+.left {
+  float: left;
+  margin-left: var(--card-side-margin);
+  margin-right: var(--card-inside-margin);
+  width: 20%;
+}
+
+.right {
+  float: right;
+  margin-left: var(--card-inside-margin);
+  margin-right: var(--card-side-margin);
+  width: 65%;
+}
+
+.about-image {
+  --image-scale: 75%;
+  border-radius: 100%;
+  height: var(--image-scale);
+  width: var(--image-scale);
+}
+
+.job {
+  margin-bottom: 2px;
+}
+
+.work {
+  margin: 0;
 }
 
 @media screen and (max-width: 1500px) {

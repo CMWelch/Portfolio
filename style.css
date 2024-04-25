@@ -99,7 +99,7 @@ h1 {
 }
 
 .about {
-  background-color: rgb(221, 216, 210);
+   background-color: rgb(203 202 196); /* rgb(221, 216, 210); */
 }
 
 .about-title {
@@ -135,13 +135,42 @@ h1 {
 }
 
 .about-image {
-  --image-scale: 75%;
+  --image-scale: 60%;
   border-radius: 100%;
   height: var(--image-scale);
   width: var(--image-scale);
 }
 
+
+.company {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.company-image {
+  --company-image-scale: 8%;
+  height: var(--company-image-scale);
+  width: var(--company-image-scale);
+  float: left;
+  border-radius: 15%;
+  float: left;
+  margin-right: 10px;
+  clear:both;
+}
+
+.middle-float {
+  float: right;
+}
+
+.company-info {
+  margin: 0px;
+  overflow:auto;
+  position: relative;
+  top: 31px;
+}
+
 .job {
+  margin-top: 10px;
   margin-bottom: 2px;
 }
 

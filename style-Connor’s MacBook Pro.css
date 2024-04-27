@@ -1,0 +1,281 @@
+:root {
+ --accent-color: orange;
+ --header-font-size: 4rem;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.blur {
+  backdrop-filter: blur(1.5px);
+  background-color: rgba(255, 255, 255, .00002);
+}
+
+.fullscreen {
+  width: 100%;
+  height: 100%;
+}
+.header {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  width: inherit;
+  top: 0;
+}
+nav {
+  display: inline-block;
+  margin-left: 70%;
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li > a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: whitesmoke;
+}
+
+.nav-li {
+  display: inline;
+  padding: 5px 10px;
+}
+
+.lightbulb {
+  height: min-content;
+}
+
+Section.landing {
+    display: block;
+    margin: 0;
+    background-image: url(images/pexels-goumbik-917463.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: var(--header-font-size);
+}
+
+.center {
+  /* Center in the middle of the screen*/
+  position: absolute;
+  inset: 0;   /* inset is the more modern shorthand of top, right bottom left */
+  margin: auto;
+  height: max-content; /* Max height and width set to content keeps the div from expanding too far */
+  width: max-content;
+}
+
+.name-title {
+  display: inline-block;
+  font-family: Inter Tight;
+  font-weight: 300;
+  font-size: var(--header-font-size);
+}
+  
+.typewriter {
+  overflow: hidden;
+  border-right: .05em solid transparent;
+  white-space: nowrap;
+  animation: 
+    typing 1s steps(20, end),
+    blinking 1s 3;
+  margin: 0;
+  text-align: center;
+  height: max-content;
+  width: max-content;
+}
+
+
+.typewriter-second {
+  overflow: hidden;
+  border-right: .05em solid rgb(168, 167, 164);
+  white-space: nowrap;
+  animation:
+    typing 1s steps(20, end) 3s,
+    blinking 1s infinite,
+    hiding 3s; /*Using this as a pure CSS way of sequencing animations*/
+  width: 0;
+  margin: 0;
+  text-align: center;
+  height: max-content;
+  width: max-content;
+}
+
+@keyframes hiding {
+  from {visibility: hidden;}
+  to {visibility: hidden;}
+}
+  
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinking {
+  from { border-color: transparent; }
+  to { border-color: var(--accent-color); }
+}
+
+.about {
+   background-color: rgb(203 202 196); /* rgb(221, 216, 210); */
+}
+
+.about-title {
+  border-bottom: 2px solid;
+  border-color: var(--accent-color);
+  width: 85%;
+  margin: 0;
+  margin-left: 7.5%;
+  padding-top: 5%;
+}
+
+.card {
+  --card-side-margin: 5%;
+  --card-inside-margin: 0;
+  display: block;
+  text-align: center;
+  margin-top: 5%;
+  font-size: 1.5rem;
+}
+
+.left {
+  float: left;
+  margin-left: var(--card-side-margin);
+  margin-right: var(--card-inside-margin);
+  width: 20%;
+}
+
+.right {
+  float: right;
+  margin-left: var(--card-inside-margin);
+  margin-right: var(--card-side-margin);
+  width: 65%;
+}
+
+.about-image {
+  --image-scale: 60%;
+  border-radius: 100%;
+  height: var(--image-scale);
+  width: var(--image-scale);
+}
+
+
+.company {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.company-image {
+  --company-image-scale: 8%;
+  height: var(--company-image-scale);
+  width: var(--company-image-scale);
+  float: left;
+  border-radius: 15%;
+  float: left;
+  margin-right: 10px;
+  clear:both;
+}
+
+.middle-float {
+  float: right;
+}
+
+.company-info {
+  margin: 0px;
+  overflow:auto;
+  position: relative;
+  top: 31px;
+  text-align: left;
+}
+
+.job {
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.work {
+  margin: 0;
+}
+
+@media screen and (max-width: 1500px) {
+  .name-title
+  {
+    display: inline;
+  }
+
+  @keyframes hiding {
+    from {display: none;}
+    to {display: none;}
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .name-title, h1 
+  {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .name-title, h1 
+  {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .name-title, h1 
+  {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .name-title, h1 
+  {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .name-title, h1 
+  {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 275px) {
+  .name-title, h1 
+  {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 175px) {
+  .name-title, h1 
+  {
+    font-size: .5rem;
+  }
+}
+
+@media screen and (max-width: 75px) {
+  .name-title, h1 
+  {
+    font-size: .25rem;
+  }
+}

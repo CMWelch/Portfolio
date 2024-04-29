@@ -22,27 +22,55 @@
             </div>
         </div>
     </section>
-    <div class="header">            
+    <div class="nav-header">            
         <nav>
             <ul>
                 <li class="nav-li">
-                    <a href="#Home">Home</a>
+                    <a class="li-a" href="#Home">Home</a>
                 </li>
                 <li class="nav-li">
-                    <a href="#About">About</a>
+                    <a class="li-a" href="#About">About</a>
                 </li>
                 <li class="nav-li">
-                    <a href="">Projects</a>
+                    <a class="li-a" href="">Projects</a>
                 </li>
                 <li class="nav-li">
-                    <a href="">Contact Me</a>
+                    <a class="li-a" href="">Contact Me</a>
                 </li>
                 <li class="nav-li">
+                    <a class="li-a" href=""><img class="lightbulb" src="images/noun-lightbulb-1262995.png" alt=""></a>
+                    
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="collapsed" class="nav-collapsed" tabindex="-1">
+        <div class="hamburger">
+            <div class="rectangle top"></div>
+            <div class="rectangle middle"></div>
+            <div class="rectangle bottom"></div>
+        </div>         
+        <nav class="nav">
+            <ul>
+                <li class="nav-li collapsed">
+                    <a class="li-a" href="#Home">Home</a>
+                </li>
+                <li class="nav-li collapsed">
+                    <a class="li-a" href="#About">About</a>
+                </li>
+                <li class="nav-li collapsed">
+                    <a class="li-a" href="">Projects</a>
+                </li>
+                <li class="nav-li collapsed">
+                    <a class="li-a" href="">Contact Me</a>
+                </li>
+                <li class="nav-li collapsed">
                     <a href=""><img class="lightbulb" src="images/noun-lightbulb-1262995.png" alt=""></a>
                 </li>
             </ul>
         </nav>
     </div>
+
     <section id="About" class="about fullscreen">
         <h1 class="about-title">About Me</h1>
         <div class="card left">
@@ -68,7 +96,6 @@
             
 
             <!-- TODOS:
-                    Try to design collapsable navbar with just CSS
                     Media query second section
                     Implement dark mode
                     Page Gimmick idea. One page that when you click the nav bar. Deletes/backspaces all the content and then typewriters the next page-->

@@ -1,6 +1,8 @@
 :root {
  --accent-color: orange;
  --header-font-size: 4rem;
+ --company-image-scale: 10rem;
+ --company-image-margin: 10px;
 }
 
 html {
@@ -238,7 +240,6 @@ h1 {
   --card-side-margin: 5%;
   --card-inside-margin: 0;
   display: block;
-  text-align: center;
   margin-top: 5%;
   font-size: 1.5rem;
 }
@@ -255,6 +256,7 @@ h1 {
   margin-left: var(--card-inside-margin);
   margin-right: var(--card-side-margin);
   width: 65%;
+  height: fit-content;
 }
 
 .about-image {
@@ -266,31 +268,41 @@ h1 {
 
 
 .company {
-  display: inline-block;
   margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 .company-image {
-  --company-image-scale: 8%;
   height: var(--company-image-scale);
   width: var(--company-image-scale);
-  float: left;
   border-radius: 15%;
-  float: left;
-  margin-right: 10px;
-  clear:both;
+  margin-right: var(--company-image-margin);
+  display:inline-block;
+  vertical-align: middle;
 }
 
-.middle-float {
-  float: right;
-}
 
 .company-info {
+  display:inline-block;
+  /* I think the 6px below is whitespace fluff from the font but not entirely sure */
+  width: calc(100% - var(--company-image-scale) - var(--company-image-margin) - 6px); 
   margin: 0px;
-  overflow:auto;
-  position: relative;
-  top: 31px;
-  text-align: left;
+  vertical-align:middle;
+  clear: right;
+}
+
+.p {
+  text-align: ;
+}
+
+.middle-img {
+  margin-right: 0;
+  margin-left: var(--company-image-margin);
+}
+
+.middle-block {
+  display: none;
 }
 
 .job {
@@ -314,6 +326,38 @@ h1 {
   }
 }
 
+@media screen and (max-width: 875px)
+{
+  .company {
+    margin-bottom: 30px;
+  }
+
+  .company-image {
+    margin: 0 auto;
+  }
+
+  .company-image, .company-info, .middle-block {
+    display: block;
+  }
+  
+  .middle-inline {
+    display: none;
+  }
+
+  .company-info {
+    width: fit-content;
+    text-align: center;
+  }
+
+  .nav-header {
+    display: none;
+  }
+
+  .nav-collapsed {
+    display: inline;
+  }
+}
+
 @media screen and (max-width: 775px) {
   .name-title, h1 
   {
@@ -332,14 +376,6 @@ h1 {
   .name-title, h1 
   {
     font-size: 2.5rem;
-  }
-
-  .nav-header {
-    display: none;
-  }
-
-  .nav-collapsed {
-    display: inline;
   }
 }
 

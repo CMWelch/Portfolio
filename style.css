@@ -1,8 +1,10 @@
 :root {
  --accent-color: orange;
  --header-font-size: 4rem;
- --company-image-scale: 10rem;
+ --card-image-scale: 10rem;
  --company-image-margin: 10px;
+ --left-about-card-width: 14%;
+ --card--side-margin: 5%;
 }
 
 html {
@@ -58,8 +60,6 @@ li > a {
   display: inline;
   padding: 5px 10px;
   font-family: Inter Tight;
-
-
 }
 
 .hamburger {
@@ -225,47 +225,63 @@ h1 {
 
 .about {
    background-color: rgb(203 202 196); /* rgb(221, 216, 210); */
+   min-height: 100vh;
+   height: max-content;
+}
+
+.about-cards {
+  --about-cards-margin: 7.5%;
+  width: calc(100% - 2 * var(--about-cards-margin));
+  height: inherit;
+  padding: 6% var(--about-cards-margin) 0 ;
 }
 
 .about-title {
   border-bottom: 2px solid;
   border-color: var(--accent-color);
-  width: 85%;
+  width: 100%;
   margin: 0;
-  margin-left: 7.5%;
-  padding-top: 5%;
 }
 
 .card {
-  --card-side-margin: 5%;
-  --card-inside-margin: 0;
-  display: block;
+  display: inline-block;
   margin-top: 5%;
   font-size: 1.5rem;
 }
 
 .left {
-  float: left;
-  margin-left: var(--card-side-margin);
-  margin-right: var(--card-inside-margin);
-  width: 20%;
+  text-align: center;
+  vertical-align: top;
+  width: var(--left-about-card-width);
+  margin-right: var(--card-side-margin);
+}
+
+.left > p {
+  text-align: center;
 }
 
 .right {
-  float: right;
-  margin-left: var(--card-inside-margin);
-  margin-right: var(--card-side-margin);
-  width: 65%;
+  padding-left: var(--card-side-margin);
   height: fit-content;
+  width: calc(100% - var(--left-about-card-width) - (2 * var(--card--side-margin)) - 6px);
+  border-left: 2px solid;
+  border-color: var(black);
 }
 
 .about-image {
-  --image-scale: 60%;
   border-radius: 100%;
-  height: var(--image-scale);
-  width: var(--image-scale);
+  height: var(--card-image-scale);
+  width: var(--card-image-scale);
 }
 
+.job-title {
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.work {
+  margin: 0;
+}
 
 .company {
   margin-bottom: 10px;
@@ -274,8 +290,8 @@ h1 {
 }
 
 .company-image {
-  height: var(--company-image-scale);
-  width: var(--company-image-scale);
+  height: var(--card-image-scale);
+  width: var(--card-image-scale);
   border-radius: 15%;
   margin-right: var(--company-image-margin);
   display:inline-block;
@@ -286,14 +302,10 @@ h1 {
 .company-info {
   display:inline-block;
   /* I think the 6px below is whitespace fluff from the font but not entirely sure */
-  width: calc(100% - var(--company-image-scale) - var(--company-image-margin) - 6px); 
+  width: calc(100% - var(--card-image-scale) - var(--company-image-margin) - 6px); 
   margin: 0px;
   vertical-align:middle;
   clear: right;
-}
-
-.p {
-  text-align: ;
 }
 
 .middle-img {
@@ -303,15 +315,6 @@ h1 {
 
 .middle-block {
   display: none;
-}
-
-.job {
-  margin-top: 10px;
-  margin-bottom: 2px;
-}
-
-.work {
-  margin: 0;
 }
 
 @media screen and (max-width: 1500px) {
@@ -326,14 +329,54 @@ h1 {
   }
 }
 
+@media screen and (max-width: 1100px) {
+
+  .right {
+    padding-left: 3%;
+    margin-left: 2%;
+  }
+
+  .left > p {
+    margin-left: 25%;
+  }
+}
+
 @media screen and (max-width: 875px)
 {
+  .about-title {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .card {
+    display: block;
+    margin: 50px auto;
+  }
+
+  .left {
+    width: fit-content;
+  }
+
+  .left > p {
+    margin-left: 0;
+  }
+
+  .right {
+    border-left: 0;
+    border-top: 2px solid;
+    border-color: var(black);
+    padding-left: 0;
+    padding-top: var(--card--side-margin);
+    padding-bottom: 5%;
+  }
+
   .company {
     margin-bottom: 30px;
   }
 
   .company-image {
     margin: 0 auto;
+    margin-bottom: 10px;
   }
 
   .company-image, .company-info, .middle-block {

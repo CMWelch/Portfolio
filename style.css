@@ -4,7 +4,7 @@
  --card-image-scale: 10rem;
  --company-image-margin: 10px;
  --left-about-card-width: 14%;
- --card--side-margin: 5%;
+ --card-side-margin: 5%;
 }
 
 html {
@@ -263,7 +263,7 @@ h1 {
 .right {
   padding-left: var(--card-side-margin);
   height: fit-content;
-  width: calc(100% - var(--left-about-card-width) - (2 * var(--card--side-margin)) - 6px);
+  width: calc(100% - var(--left-about-card-width) - (2 * var(--card-side-margin)) - 6px);
   border-left: 2px solid;
   border-color: var(black);
 }
@@ -312,6 +312,10 @@ h1 {
   margin-right: 0;
   margin-left: var(--company-image-margin);
 }
+
+/* .middle-info {
+  text-align: right;
+} */
 
 .middle-block {
   display: none;
@@ -366,7 +370,7 @@ h1 {
     border-top: 2px solid;
     border-color: var(black);
     padding-left: 0;
-    padding-top: var(--card--side-margin);
+    padding-top: var(--card-side-margin);
     padding-bottom: 5%;
   }
 

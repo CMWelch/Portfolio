@@ -6,6 +6,7 @@
  --left-about-card-width: 14%;
  --card-side-margin: 5%;
  --section-padding: 7.5%;
+ --project-card-hover-size: 0%;
 }
 
 html {
@@ -320,12 +321,13 @@ h1 {
 }
 
 .projects {
-  /* background-color: rgb(119, 118, 115); */
-  /* background: linear-gradient(45deg, grey 50%, white); */
-  background-color: rgba(0, 0, 0, .8);
+  background-color: #333;
+
+  /* background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%); */
+
   min-height: 100vh;
   height: max-content;
-  color: wheat;
+  color: white;
 }
 
 .projects-container {
@@ -336,35 +338,43 @@ h1 {
 
 .project-header {
   text-align: right;
+  border-color: white;
 }
 
 .project-cards {
-  margin: 2% 5%;
+  margin: 0 auto;
   width: calc(100% - 2 * 5%);
   height: 100%;
+  text-align: center;
 }
 
+
+
 .project-card {
-  --project-card-border-radius: 5%;
+  --project-card-border-radius: 0%;
   --project-card-margin: 3%;
   --project-card-padding: 2%;
   display: inline-block;
   margin: var(--project-card-margin);
-  width: calc(33% - 2 * var(--project-card-margin) - 2 * var(--project-card-padding));
+  width: calc(28% - 2 * var(--project-card-margin) - 2 * var(--project-card-padding) - var(--project-card-hover-size));
   text-align: center;
   text-decoration: none;
   border-radius: var(--project-card-border-radius);
-  border: darkgray 1px solid;
-  background: linear-gradient(45deg, rgb(80, 89, 99) 50%, lightblue);
+  /* border: darkgray 1px solid; */
+  /* background: linear-gradient(90deg, rgb(82, 94, 99) , rgb(83, 91, 94)); */
+  background-color: rgb(97, 97, 97);
   padding: var(--project-card-padding);
   color: var(--accent-color);
-  box-shadow: 10px 5px 30px black, 5px 2px 5px black;
+  box-shadow: 0px 0px 10px var(--accent-color), 0px 0px 5px var(--accent-color);
 }
 
 .project-card:hover {
+  font-size: 1.25rem;
+  --project-card-hover-size: 5%;
   transition: all 1s;
   background: linear-gradient(45deg, rgb(80, 89, 99), white);
   color: black;
+  width: calc(28% - 2 * var(--project-card-margin) - 2 * var(--project-card-padding) + var(--project-card-hover-size));
 }
 
 .project-description {

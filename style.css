@@ -16,6 +16,7 @@ html {
 body {
     margin: 0px;
     padding: 0px;
+
 }
 
 .blur {
@@ -161,6 +162,7 @@ Section.landing {
 h1 {
     font-weight: 300;
     font-size: var(--header-font-size);
+    margin: 0;
 }
 
 .center {
@@ -224,7 +226,7 @@ h1 {
 }
 
 .about {
-   background-color: rgb(203 202 196); /* rgb(221, 216, 210); */
+   background-color: rgb(206, 203, 196); /* rgb(203 202 196);*/
    min-height: 100vh;
    height: max-content;
 }
@@ -243,7 +245,7 @@ h1 {
   margin: 0;
 }
 
-.card {
+.company-card {
   display: inline-block;
   margin-top: 5%;
   font-size: 1.5rem;
@@ -313,10 +315,6 @@ h1 {
   margin-left: var(--company-image-margin);
 }
 
-/* .middle-info {
-  text-align: right;
-} */
-
 .middle-block {
   display: none;
 }
@@ -357,7 +355,7 @@ h1 {
     margin: 50px auto;
   }
 
-  .left {
+  .left, .right {
     width: fit-content;
   }
 

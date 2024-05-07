@@ -227,7 +227,7 @@ h1 {
 }
 
 .about {
-   background-color: rgb(206, 203, 196); /* rgb(203 202 196);*/
+   background-color: rgb(206, 203, 196);
    min-height: 100vh;
    height: max-content;
 }
@@ -239,11 +239,29 @@ h1 {
   padding: 6% var(--about-cards-margin) 0 ;
 }
 
+.headers {
+  border-bottom: 10px solid;
+  border-color: gray;
+  width: fit-content;
+  border-bottom-left-radius: 20%;
+  padding-bottom: 5px;
+  margin-left: 5%;
+}
+
 .section-header {
-  border-bottom: 2px solid;
+  width: fit-content;
+  text-align: right;
+  margin: 0 ;
+  font-weight: 800;
+  display: inline;
+}
+
+.parenthesis {
+  border-radius: 20%;
+  border-left: 10px solid;
+  border-right: 10px solid;
   border-color: var(--accent-color);
-  width: 100%;
-  margin: 0;
+  padding: 0 10px;
 }
 
 .company-card {
@@ -321,13 +339,13 @@ h1 {
 }
 
 .projects {
-  background-color: #333;
-
+  background-color: #cac5ae;
+  /* background: repeating-radial-gradient(circle at 100% ,#333 10%, #eee 20%, #333 30%); */
   /* background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%); */
 
   min-height: 100vh;
   height: max-content;
-  color: white;
+  color: black;
 }
 
 .projects-container {
@@ -338,7 +356,7 @@ h1 {
 
 .project-header {
   text-align: right;
-  border-color: white;
+  border-color: black;
 }
 
 .project-cards {

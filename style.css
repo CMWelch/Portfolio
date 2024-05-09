@@ -23,6 +23,10 @@ body {
     overflow-x: hidden;
 }
 
+p {
+  margin: 0;
+}
+
 
 .blur {
   backdrop-filter: blur(1px);
@@ -471,6 +475,22 @@ h1 {
   width: 100%;
   border-radius: var(--project-card-border-radius);
   border: var(--accent-color) 1px solid;
+}
+
+.contact {
+  height: 25vh;
+  background-color: black;
+  color: var(--accent-color);
+}
+
+.contact-container {
+  width: fit-content;
+  height: fit-content;
+  margin: calc(25vh / 2) auto;
+}
+
+.message-form {
+
 }
 
 @media screen and (max-width: 1500px) {

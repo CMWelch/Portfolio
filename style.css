@@ -20,7 +20,9 @@ body {
     padding: 0px;
     font-family: Inter Tight;
     background-color: black;
+    overflow-x: hidden;
 }
+
 
 .blur {
   backdrop-filter: blur(1px);
@@ -227,30 +229,30 @@ h1 {
   to { border-color: var(--accent-color); }
 }
 
-section {
-  opacity: 0;
-  scale: .1;
-  animation: about-scroll linear forwards;
-  animation-timeline: view();
-  animation-range-start: entry;
-  animation-range-end: 500px;
-}
-
-@keyframes about-scroll {
-  to { opacity: 1; 
-      scale: 1;}
-}
-
 .about {
+  --diagonal-skew: -10deg;
    background-color: rgb(206, 203, 196);
    min-height: 100vh;
    height: max-content;
+
+   /* Keep the psudeo element contained within the section */
+   position: relative;
+   isolation: isolate;
+}
+
+.about::after {
+  content: '';
+  background: linear-gradient(45deg,#CECBC4, #2F4858);
+  position: absolute;
+  inset: 0;
+  transform: skewY(var(--diagonal-skew));
+  z-index: -1;
 }
 
 .about-cards {
   --about-cards-margin: 7.5%;
   width: calc(100% - 2 * var(--about-cards-margin));
-  height: inherit;
+  height: 100%;
   padding: 6% var(--about-cards-margin) 0 ;
 }
 
@@ -265,7 +267,7 @@ section {
 
   transform-origin: left;
   opacity: 0;
-  scale: .4;
+  /* scale: .4; */
   animation: header-scroll linear forwards;
   animation-timeline: view();
   animation-range-start: entry;
@@ -274,8 +276,8 @@ section {
 
 @keyframes header-scroll {
   to { opacity: 1; 
-       margin-left: 5%;
-      scale: 1;}
+       margin-right: 5%;
+      }
 }
 
 .section-header {
@@ -387,6 +389,7 @@ section {
 }
 
 .projects {
+  --diagonal-skew: 10deg;
   background-color: #cac5ae;
   /* background: repeating-radial-gradient(circle at 100% ,#333 10%, #eee 20%, #333 30%); */
   /* background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%); */
@@ -394,6 +397,21 @@ section {
   min-height: 100vh;
   height: max-content;
   color: black;
+
+   /* Keep the psudeo element contained within the section */
+   position: relative;
+   isolation: isolate;
+
+}
+
+.projects::after {
+  content: '';
+  background: linear-gradient(135deg,#F99053, #9F6B4E);
+  position: absolute;
+  inset: 0;
+  transform: skewY(var(--diagonal-skew));
+  z-index: -1;
+  clip-path: inset(0px 0px 0px 0px);
 }
 
 .projects-container {

@@ -176,10 +176,29 @@ h1 {
 .center {
   /* Center in the middle of the screen*/
   position: absolute;
-  inset: 0;   /* inset is the more modern shorthand of top, right bottom left */
+  inset: 0;   /* inset is the more modern shorthand of top right bottom left */
   margin: auto;
   height: max-content; /* Max height and width set to content keeps the div from expanding too far */
   width: max-content;
+}
+
+.resume {
+  inset: 150px 0 0 0;
+  height: 3rem;
+  font-size: 1rem;
+  background-color: black;
+  color: var(--accent-color);
+  width: 10rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 10px;
+  animation: button-hide 3s forwards;
+  animation-delay: 4s;
+  opacity: 0;
+}
+
+@keyframes button-hide {
+  to {opacity: 1;}
 }
 
 .name-title {

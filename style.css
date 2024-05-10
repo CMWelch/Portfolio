@@ -394,7 +394,9 @@ h1 {
 
 .projects {
   --diagonal-skew: 10deg;
-  background-color: #cac5ae;
+  background-color: rgb(206, 203, 196);
+
+  background: linear-gradient(to right top, black 50%, rgb(206, 203, 196) 50%, rgb(206, 203, 196));
   /* background: repeating-radial-gradient(circle at 100% ,#333 10%, #eee 20%, #333 30%); */
   /* background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%); */
 
@@ -436,8 +438,6 @@ h1 {
   text-align: center;
 }
 
-
-
 .project-card {
   --project-card-border-radius: 2%;
   --project-card-margin: 3%;
@@ -478,20 +478,95 @@ h1 {
 }
 
 .contact {
-  height: 25vh;
+  height: fit-content;
   background-color: black;
   color: var(--accent-color);
 }
 
+.contact-header {
+  padding-top: 30px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
 .contact-container {
-  width: fit-content;
+  width: 25%;
   height: fit-content;
-  margin: calc(25vh / 2) auto;
+  margin: 0 auto;
+  padding: 50px 0;
 }
 
-.message-form {
+.message-form > div > input {
+  height: 30px;
+}
+
+.message-form > div > .form-submit {
+  height: 40px;
+}
+
+.form-section {
+  margin: 5% 0;
 
 }
+
+.form-input {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.form-section > label {
+  margin-bottom: 50px;
+  font-size: 1.25rem;
+  font-family: inherit;
+}
+
+
+.social-media {
+  padding-block: 50px;
+  text-align: center;
+}
+
+.social {
+  border-radius: 100%;
+  display: inline-block;
+  background-color: white;
+  width: 80px;
+  margin: 10px;
+}
+
+.social:hover {
+  background-color: var(--accent-color);
+}
+
+
+input, textarea {
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 5px;
+  color:#2F4858;
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 5px;
+  color:#2F4858;
+}
+
+.form-button {
+  text-align: center;
+}
+
+.form-submit {
+  padding: 4px 30px;
+  margin: 0 auto;
+  border: none;
+  background-color: var(--accent-color);
+  color: black;
+}
+
+
 
 @media screen and (max-width: 1500px) {
   .name-title

@@ -192,13 +192,29 @@ h1 {
   font-family: inherit;
   border: none;
   border-radius: 10px;
-  animation: button-hide 3s forwards;
-  animation-delay: 4s;
-  opacity: 0;
+  animation: button-hide 4s,
+  button-reveal 3s ease-in 4s;
+  opacity: 1;
+}
+
+.resume:hover {
+  transition: all 1s;
+  /* animation: color-change 2s; */
+  background-color: white;
+  color: black;
+}
+
+@keyframes color-change {
+  
 }
 
 @keyframes button-hide {
-  to {opacity: 1;}
+  from {visibility: hidden;}
+  to {visibility: hidden;}
+}
+
+@keyframes button-reveal {
+  from {opacity: 0;}
 }
 
 .name-title {

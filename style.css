@@ -188,7 +188,9 @@ h1 {
 }
 
 .resume {
-  inset: 150px 0 0 0;
+  display: block;
+  margin: 0 auto;
+  /* inset: 150px 0 0 0; */
   height: 3rem;
   font-size: 1rem;
   background-color: black;
@@ -200,6 +202,7 @@ h1 {
   animation: button-hide 4s,
   button-reveal 3s ease-in 4s;
   opacity: 1;
+  scale: 1;
 }
 
 .resume:hover {
@@ -337,7 +340,6 @@ h1 {
 
 @keyframes header-scroll {
   to { opacity: 1; 
-       margin-right: 5%;
       }
 }
 
@@ -403,14 +405,14 @@ h1 {
   height: 100%;
 }
 
-.left-animation {
+/* .left-animation {
   padding-left: 1000px;
   animation: company-left linear forwards;
   animation-timeline: view();
   animation-range-start: entry;
   animation-range-end: 250px;
   opacity: 0;
-}
+} */
 
 @keyframes company-left {
   to {
@@ -575,6 +577,9 @@ h1 {
 .social-media {
   padding-block: 50px;
   text-align: center;
+  min-width: max-content;
+  /* width: 300px;
+  margin: 0 auto; */
 }
 
 .social {
@@ -642,6 +647,10 @@ input::placeholder, textarea::placeholder {
   .project-card {
     font-size: .75rem;
   }
+
+  .resume {
+    inset: 250px 0 0 0;
+  }
 }
 
 @media screen and (max-width: 875px)
@@ -673,13 +682,22 @@ input::placeholder, textarea::placeholder {
     padding-bottom: 5%;
   }
 
+  .work {
+    margin-bottom: 10px;
+  }
+
   .company {
     margin-bottom: 30px;
   }
 
   .company-image {
+    --card-image-scale: 8rem;
     margin: 0 auto;
     margin-bottom: 10px;
+  }
+
+  .company-card {
+    font-size: 1rem;
   }
 
   .company-image, .company-info, .middle-block {
@@ -713,12 +731,19 @@ input::placeholder, textarea::placeholder {
     display: inline;
   }
 
+  .contact-container {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 775px) {
   .name-title, h1 
   {
     font-size: 3.5rem;
+  }
+
+  .resume {
+    scale: .8;
   }
 }
 
@@ -727,12 +752,20 @@ input::placeholder, textarea::placeholder {
   {
     font-size: 3rem;
   }
+
+  .resume {
+    scale: .7;
+  }
 }
 
 @media screen and (max-width: 575px) {
   .name-title, h1 
   {
     font-size: 2.5rem;
+  }
+
+  .resume {
+    scale: .6;
   }
 }
 
@@ -741,12 +774,20 @@ input::placeholder, textarea::placeholder {
   {
     font-size: 2rem;
   }
+
+  .resume {
+    scale: .5;
+  }
 }
 
 @media screen and (max-width: 375px) {
   .name-title, h1 
   {
     font-size: 1.5rem;
+  }
+
+  .resume {
+    scale: .4;
   }
 }
 
@@ -755,6 +796,10 @@ input::placeholder, textarea::placeholder {
   {
     font-size: 1rem;
   }
+
+  .resume {
+    scale: .3;
+  }
 }
 
 @media screen and (max-width: 175px) {
@@ -762,11 +807,19 @@ input::placeholder, textarea::placeholder {
   {
     font-size: .5rem;
   }
+
+  .resume {
+    scale: .2;
+  }
 }
 
 @media screen and (max-width: 75px) {
   .name-title, h1 
   {
     font-size: .25rem;
+  }
+
+  .resume {
+    scale: .1;
   }
 }
